@@ -94,6 +94,7 @@ You will need to provide detailed documentation of your API endpoints including 
 - Includes a list of categories
 - Paginated in groups of 10
 Sample: curl http://127.0.0.1:5000/questions
+
 {
   "categories": {
     "1": "Science", 
@@ -183,6 +184,7 @@ Sample: curl http://127.0.0.1:5000/questions
 - Deletes a question by id using url parameters
 - If successful, returns id of deleted questions, updated set of questions and count of new total questions available 
 Sample: curl -X DELETE http://127.0.0.1:5000/questions/19
+
   {
   "deleted": 19,
   "questions": [
@@ -297,6 +299,7 @@ Sample: curl http://127.0.0.1:5000/questions/search -X POST -H "Content-Type: ap
 - Fetches all the questions in a specified category by id using url parameters
 - Returns a JSON object with paginated questions list from the specified category in input
 Sample: curl http://127.0.0.1:5000/categories/4/questions
+
 {
   "current_category": "History",
   "questions": [
