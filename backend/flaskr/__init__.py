@@ -280,5 +280,15 @@ def create_app(test_config=None):
             jsonify({"success": False, "error": 400, "message": "bad request"}), 400
         )
 
+    @app.errorhandler(405)
+    def invalid_method(error):
+        return (
+            jsonify({
+            "success": False,
+            'error': 405,
+            "message": "Invalid method!"
+        }), 405
+        )
+
     return app
 
